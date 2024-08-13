@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuItem } from '../interfaces/menu-item';
 
 @Component({
   selector: 'app-menu-bar',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './menu-bar.component.css'
 })
 export class MenuBarComponent {
+  buttonNamesList: MenuItem[];
 
+  constructor() {
+    this.buttonNamesList = [];
+  }
 }
