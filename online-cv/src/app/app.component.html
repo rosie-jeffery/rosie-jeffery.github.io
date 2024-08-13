@@ -1,9 +1,17 @@
-<body class="flex h-screen w-screen">
-  <nav class="flex w-full top-0 h-fit">
-    <div class="h-full w-full grid grid-cols-12 gap-4">
+<body class="flex h-screen w-screen flex-col">
+  <nav class="flex w-full top-0 h-1/6 pt-2">
+    <div class="h-full w-full grid grid-cols-12">
+      <div class="col-span-1 col-start-1">
+        <div class="flex w-full p-2 m-4 items-center">
+          Image!
+        </div>
+      </div>
       <div class="col-span-6 col-start-7">
         <app-menu-bar></app-menu-bar>
       </div>
     </div>
   </nav>
+  <div class="flex size-full">
+    <router-outlet> </router-outlet>
+  </div>
 </body>
