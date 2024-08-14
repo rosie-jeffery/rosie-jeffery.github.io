@@ -1,5 +1,5 @@
-<li class="flex w-full h-fit m-2 p-2 items-center">
-    <button class="">
+<li class="flex w-full h-fit m-2 items-center">
+    <a [routerLink]="['/', this.menuItem.route]" class="hover:text-purple-300 border-b-2 focus:border-purple-400 py-2 border-white cursor-pointer">
         {{ this.menuItem.title }}
-    </button>
+    </a> 
 </li>

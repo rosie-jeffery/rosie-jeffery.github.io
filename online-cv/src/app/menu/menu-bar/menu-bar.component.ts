@@ -16,16 +16,20 @@ export class MenuBarComponent {
   constructor() {
     this.menuItemList = [
       {
-        title: "About Me"
+        title: "About Me",
+        route: "about-me"
       },
       {
-        title: "Skills and Experience"
+        title: "Skills and Experience",
+        route: "skills-and-experience"
       },
       {
-        title: "Projects and Learning"
+        title: "Projects and Learning",
+        route: "projects-and-learning"
       },
       {
-        title: "Contact"
+        title: "Contact",
+        route: "contact"
       }
     ];
   }
