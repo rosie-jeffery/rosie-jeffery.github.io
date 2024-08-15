@@ -1,32 +1,19 @@
 <div class="w-screen h-full grid grid-cols-12 grid-rows-12">
-    <div class="row-start-3 col-end-7 col-start-3">
-        <p class="text-right mr-6 text-xl hover:-translate-x-4 hover:text-purple-300">
-            Email:
-        </p>
+    <div class="flex flex-col row-start-3 row-end-9 col-end-7 col-start-3 mr-3 justify-between my-2 pr-3">
+        <button (click)="toggleEmailButtonText()" class="text-right text-xl hover:-translate-x-4 
+        hover:text-purple-300 cursor-pointer active:text-transparent">
+            {{ this.emailButtonName }}
+        </button>
+        <button (click)="toggleGitHubButtonText()" class="text-right text-xl hover:-translate-x-4 hover:text-purple-300 cursor-pointer">
+            {{ this.gitHubButtonName }}
+        </button>
+        <button (click)="toggleLinkedInButtonText()" class="text-right text-xl hover:-translate-x-4 hover:text-purple-300 cursor-pointer">
+            {{ this.linkedInButtonName }}
+        </button>
     </div>
-    <div class="row-start-3 col-start-7 col-span-4">
+    <div class="row-start-3 col-start-7 col-span-4 ml-3 my-2">
         <p class="text-left text-xl hover:translate-x-4 hover:text-purple-300">
-            something&#64;gmail.com
-        </p>
-    </div>
-    <div class="row-start-5 col-end-7 col-start-3">
-        <p class="text-right mr-6 text-xl hover:-translate-x-4 hover:text-purple-300">
-            LinkedIn:
-        </p>
-    </div>
-    <div class="row-start-5 col-start-7 col-span-4">
-        <p class="text-left text-xl hover:translate-x-4 hover:text-purple-300">
-            something&#64;gmail.com
-        </p>
-    </div>
-    <div class="row-start-7 col-end-7 col-start-3">
-        <p class="text-right mr-6 text-xl hover:-translate-x-4 hover:text-purple-300">
-            GitHub:
-        </p>
-    </div>
-    <div class="row-start-7 col-start-7 col-span-4">
-        <p class="text-left text-xl hover:translate-x-4 hover:text-purple-300">
-            something&#64;gmail.com
+            <app-contact-form> </app-contact-form>
         </p>
     </div>
 </div>
