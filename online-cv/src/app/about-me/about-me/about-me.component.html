@@ -2,7 +2,7 @@
     <div class="flex col-start-2 col-end-7 row-start-1 row-end-11 h-fit my-6">
         <app-long-bio> </app-long-bio>
     </div>
-    <div class="flex col-start-7 row-start-2 h-fit">
-        Images here!
-    </div>
+    <ul class="flex col-start-7 col-end-13 row-start-1 row-end-11 ml-6 flex-col flex-wrap flex-grow">
+        <app-photo-frame *ngFor="let photo in this.photos" [photoFrame]="photo"> </app-photo-frame>
+    </ul>
 </div>

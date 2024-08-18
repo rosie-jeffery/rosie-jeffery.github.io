@@ -1,15 +1,17 @@
 <div class="w-screen h-full grid grid-cols-12 grid-rows-12">
     <div class="flex flex-col row-start-3 row-end-9 col-end-7 col-start-3 mr-3 justify-between my-2 pr-3">
         <button (click)="toggleEmailButtonText()" class="text-right text-xl hover:-translate-x-4 
-        hover:text-purple-300 cursor-pointer active:text-transparent">
+        hover:text-purple-300 active:text-transparent">
             {{ this.emailButtonName }}
         </button>
-        <button (click)="toggleGitHubButtonText()" class="text-right text-xl hover:-translate-x-4 hover:text-purple-300 cursor-pointer">
+        <a (click)="toggleGitHubButtonText()" href="https://github.com/rosie-jeffery" class="text-right text-xl hover:-translate-x-4 
+        hover:text-purple-300 cursor-pointer active:text-transparent">
             {{ this.gitHubButtonName }}
-        </button>
-        <button (click)="toggleLinkedInButtonText()" class="text-right text-xl hover:-translate-x-4 hover:text-purple-300 cursor-pointer">
+        </a>
+        <a (click)="toggleLinkedInButtonText()" href="www.linkedin.com/in/rosie-jeffery" class="text-right text-xl hover:-translate-x-4 
+        hover:text-purple-300 cursor-pointer active:text-transparent">
             {{ this.linkedInButtonName }}
-        </button>
+        </a>
     </div>
     <div class="row-start-3 col-start-7 col-span-4 ml-3 my-2">
         <p class="text-left text-xl hover:translate-x-4 hover:text-purple-300">

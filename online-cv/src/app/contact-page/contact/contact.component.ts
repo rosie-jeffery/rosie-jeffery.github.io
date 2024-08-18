@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ContactFormComponent } from "../contact-form/contact-form.component";
 import { Clipboard } from '@angular/cdk/clipboard';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ContactFormComponent],
+  imports: [ ContactFormComponent ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -22,7 +23,7 @@ export class ContactComponent {
   linkedInButtonName: string;
   myLinkedIn: string = "www.linkedin.com/in/rosie-jeffery";
 
-  constructor( private clipboard: Clipboard ) {
+  constructor( private clipboard: Clipboard, private router: Router ) {
     this.gitHubButtonName = this.gitHubString;
     this.emailButtonName = this.emailString;
     this.linkedInButtonName = this.linkedInString;
@@ -41,7 +42,6 @@ export class ContactComponent {
   toggleLinkedInButtonText(): void {
     if (this.linkedInButtonName === this.linkedInString) {
       this.linkedInButtonName = this.myLinkedIn;
-      this.copyText(this.myLinkedIn);
     }
     else {
       this.linkedInButtonName = this.linkedInString;
@@ -51,7 +51,6 @@ export class ContactComponent {
   toggleGitHubButtonText(): void {
     if (this.gitHubButtonName === this.gitHubString) {
       this.gitHubButtonName = this.myGitHub;
-      this.copyText(this.myGitHub);
     }
     else {
       this.gitHubButtonName = this.gitHubString;

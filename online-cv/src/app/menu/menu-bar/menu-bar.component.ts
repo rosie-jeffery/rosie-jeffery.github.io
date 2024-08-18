@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenuItem } from '../menu-item.model';
+import { MenuItem } from '../menu-item/menu-item.model';
 import { MenuItemComponent } from "../menu-item/menu-item.component";
 
 @Component({
@@ -26,6 +26,10 @@ export class MenuBarComponent {
       {
         title: "Projects and Learning",
         route: "projects-and-learning"
+      },
+      {
+        title: "Blog",
+        route: "blog"
       },
       {
         title: "Contact",
