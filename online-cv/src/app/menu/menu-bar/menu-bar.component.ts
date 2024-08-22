@@ -20,18 +20,6 @@ export class MenuBarComponent {
         route: "about-me"
       },
       {
-        title: "Skills and Experience",
-        route: "skills-and-experience"
-      },
-      {
-        title: "Projects and Learning",
-        route: "projects-and-learning"
-      },
-      {
-        title: "Blog",
-        route: "blog"
-      },
-      {
         title: "Contact",
         route: "contact"
       }

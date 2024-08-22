@@ -1,8 +1,18 @@
-<div class="h-fit w-screen grid grid-cols-12 grid-rows-12">
-    <div class="flex col-start-2 col-end-7 row-start-1 row-end-11 h-fit my-6">
+<div class="w-screen grid grid-cols-12 grid-rows-12 h-screen">
+    <div class="flex col-start-2 col-end-7 my-6 justify-items-center row-start-1 row-span-12 row-end-13">
         <app-long-bio> </app-long-bio>
     </div>
-    <ul class="flex col-start-7 col-end-13 row-start-1 row-end-11 ml-6 flex-col flex-wrap flex-grow">
-        <app-photo-frame *ngFor="let photo in this.photos" [photoFrame]="photo"> </app-photo-frame>
+    <ul class="row-start-1 row-end-13 col-start-7 col-end-13 mr-6 ml-3 my-2 flex-row flex flex-grow-0 justify-evenly">
+        <span class="rounded-lg overflow-hidden flex size-full">
+            <div class="basis-1/3 flex-col m-2">
+                <app-photo-frame *ngFor="let photoFrame of this.photosColOne" [photoFrame]="photoFrame"> </app-photo-frame>
+            </div>
+            <div class="basis-1/3 flex-col m-2">
+                <app-photo-frame *ngFor="let photoFrame of this.photosColTwo" [photoFrame]="photoFrame"> </app-photo-frame>
+            </div>
+            <div class="basis-1/3 flex-col m-2">
+                <app-photo-frame *ngFor="let photoFrame of this.photosColThree" [photoFrame]="photoFrame"> </app-photo-frame>
+            </div>
+        </span>
     </ul>
 </div>

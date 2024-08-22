@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { ContactFormComponent } from "../contact-form/contact-form.component";
 import { Clipboard } from '@angular/cdk/clipboard';
 import { Router } from '@angular/router';
+import { PhotoFrame } from '../../shared/photo-frame/photo-frame.model';
+import { PhotoFrameComponent } from "../../shared/photo-frame/photo-frame.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ ContactFormComponent ],
+  imports: [ContactFormComponent, PhotoFrameComponent, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -17,16 +20,74 @@ export class ContactComponent {
 
   gitHubButtonName: string;
   gitHubString: string = "GitHub";
-  myGitHub: string = "https://github.com/rosie-jeffery";
+  myGitHub: string = "rosie-jeffery";
 
-  linkedInString: string = "LinkedIn";
   linkedInButtonName: string;
-  myLinkedIn: string = "www.linkedin.com/in/rosie-jeffery";
+  linkedInString: string = "LinkedIn";
+  myLinkedIn: string = "Rosie Jeffery";
+
+  photosColOne: PhotoFrame[];
+  photosColTwo: PhotoFrame[];
+  photosColThree: PhotoFrame[];
 
   constructor( private clipboard: Clipboard, private router: Router ) {
     this.gitHubButtonName = this.gitHubString;
     this.emailButtonName = this.emailString;
     this.linkedInButtonName = this.linkedInString;
+
+    this.photosColOne = [
+      {
+        title: "",
+        path: "/pictures/IMG_3988 Large.jpeg",
+        caption: "",
+      },
+      {
+        title: "Rosie BeReal",
+        path: "/pictures/IMG_2693 Large.jpeg",
+        caption: "",
+      },
+      {
+        title: "Water of Leith",
+        path: "/pictures/IMG_3928 Large.jpeg",
+        caption: "",
+      },
+    ]
+
+    this.photosColTwo = [
+      {
+        title: "",
+        path: "/pictures/IMG_3988 Large.jpeg",
+        caption: "",
+      },
+      {
+        title: "Rosie BeReal",
+        path: "/pictures/IMG_2693 Large.jpeg",
+        caption: "",
+      },
+      {
+        title: "Water of Leith",
+        path: "/pictures/IMG_3928 Large.jpeg",
+        caption: "",
+      },
+    ]
+
+    this.photosColThree = [
+      {
+        title: "",
+        path: "/pictures/IMG_3988 Large.jpeg",
+        caption: "",
+      },
+      {
+        title: "Rosie BeReal",
+        path: "/pictures/IMG_2693 Large.jpeg",
+        caption: "",
+      },
+      {
+        title: "Water of Leith",
+        path: "/pictures/IMG_3928 Large.jpeg",
+        caption: "",
+      },
+    ]
   }
 
   toggleEmailButtonText(): void {

@@ -1,14 +1,13 @@
 <body class="flex h-screen w-screen flex-col">
-  <nav class="flex w-full top-0 h-1/6 py-2">
+  <nav class="flex w-full top-0 h-fit py-2 border-b-2 border-slate-200">
     <div class="h-full w-full grid grid-cols-12">
-      <div class="col-span-1 col-start-1">
-        <div class="flex w-full p-2 m-4 items-center">
-          <a [routerLink]="['/']">
-            Image!
-          </a>
-        </div>
+      <div class="flex w-full my-4 place-self-center place-items-stretch col-span-1 col-start-1 place-content-center">
+        <a [routerLink]="['/']" class="font-serif font-bold flex size-fit text-center place-self-center text-5xl 
+            hover:text-purple-300">
+            RJ
+        </a>
       </div>
-      <div class="col-start-6 col-end-13">
+      <div class="col-start-11 col-end-13 my-2">
         <app-menu-bar></app-menu-bar>
       </div>
     </div>
