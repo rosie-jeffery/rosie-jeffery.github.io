@@ -1,0 +1,30 @@
+<div class="w-screen h-full grid grid-cols-12 grid-rows-12">
+    <div class="flex flex-col row-start-3 row-end-9 col-end-7 col-start-3 mr-3 justify-between my-2 pr-3">
+        <button (click)="toggleEmailButtonText()" class="text-right text-xl hover:-translate-x-4 
+        hover:text-purple-300 active:text-transparent">
+            {{ this.emailButtonName }}:
+        </button>
+        <a (click)="toggleGitHubButtonText()" href="https://github.com/rosie-jeffery" class="text-right text-xl hover:-translate-x-4 
+        hover:text-purple-300 cursor-pointer active:text-transparent">
+            {{ this.gitHubButtonName }}:
+        </a>
+        <a (click)="toggleLinkedInButtonText()" href="https://www.linkedin.com/in/rosie-jeffery" class="text-right text-xl hover:-translate-x-4 
+        hover:text-purple-300 cursor-pointer active:text-transparent">
+            {{ this.linkedInButtonName }}:
+        </a>
+    </div>
+    <div class="flex flex-col row-start-3 row-end-9 col-end-13 col-start-7 mr-3 justify-between my-2 pr-3">
+        <p class="text-left text-xl hover:translate-x-4 cursor-default
+        hover:text-purple-300 active:text-transparent">
+            {{ this.myEmail }}
+        </p>
+        <p class="text-left text-xl hover:translate-x-4 
+        hover:text-purple-300 cursor-default active:text-transparent">
+            {{ this.myGitHub }}
+        </p>
+        <p class="text-left text-xl hover:translate-x-4 
+        hover:text-purple-300 cursor-default active:text-transparent">
+            {{ this.myLinkedIn }}
+        </p>
+    </div>
+</div>
